@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Renev</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+  <style>
+    h1 {
+      font-size: 50px !important;
+    }
+
+    h2 {
+      font-size: 38px !important;
+    }
+
+    h3 {
+      font-size: 28px !important;
+    }
+
+    h4 {
+      font-size: 22px !important;
+    }
+
+    h5 {
+      font-size: 18px !important;
+    }
+
+    .bg-lime {
+      background-color: #CEF12B !important;
+    }
+
+    .text-lime {
+      color: #CEF12B !important;
+    }
+
+    .bg-dblack {
+      background-color: #0b0b0b !important;
+    }
+
+    .text-dblack {
+      color: #0b0b0b !important;
+    }
+
+    .bg-gray {
+      background-color: #303035 !important;
+    }
+
+    .text-gray {
+      color: #303035 !important;
+    }
+
+    .btn-lime {
+      background-color: #CEF12B !important;
+      color: black !important;
+      font-weight: 700 !important;
+      border: none !important;
+      transition: transform 0.3s ease !important;
+      padding: 12px 18px !important;
+    }
+
+    .btn-lime:hover {
+      background-color: white !important;
+      color: black !important;
+      transform: scale(1.05) !important;
+    }
+
+    /* i:hover {
+      cursor: pointer !important;
+      color: #CEF12B !important;
+    } */
+
+    /* ===== NAVBAR ===== */
+
+    body {
+      margin: 0;
+      padding: 0;
+      letter-spacing: 0.8px;
+      font-family: 'Space Grotesk', sans-serif;
+
+    }
+
+    .brand-logo {
+      width: 30px;
+      margin-right: 10px;
+      margin-bottom: 3px;
+      color: #CEF12B;
+    }
+
+    i {
+      cursor: pointer;
+    }
+
+    .navbar {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* hero section */
+    .hero {
+      position: relative;
+      color: white;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      background-image: url('../images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: 80px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to left,
+          rgba(205, 241, 43, 0.25),
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.7));
+      z-index: 1;
+    }
+
+    .hero .hero-text {
+      position: relative;
+      z-index: 2;
+      padding: 32px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: white;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    .hero-img {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-img img {
+      width: 60%;
+      max-width: 500px;
+      border-radius: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    /* marquee */
+    .marquee-sec {
+      overflow: hidden;
+    }
+
+    .marquee-inner {
+      gap: 60px;
+      white-space: nowrap;
+      animation: scroll 45s linear infinite;
+    }
+
+    /* services */
+    .service {
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .service::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .service-card {
+      background: #000;
+      border-radius: 15px;
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      background: linear-gradient(135deg, #cef12b2e, #18191e);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-card .icon {
+      font-size: 2.5rem;
+      color: #cef12b;
+    }
+
+    /* industry */
+    .industries-section {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background: url("/images/bg.jpg") center/cover no-repeat;
+    }
+
+    .industries-section::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to left, rgba(206, 241, 43, 0.2), #18191e);
+      z-index: 1;
+    }
+
+    .industries-section h4 {
+      position: relative;
+      z-index: 2;
+    }
+
+    .industries-scroll {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      white-space: nowrap;
+      animation: scroll 45s linear infinite;
+      padding: 40px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .industry-item {
+      background: linear-gradient(90deg, #1b1b1b 0%, #2c2c2c 100%);
+      color: #fff;
+      border-radius: 80px;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 18px 28px;
+      flex-shrink: 0;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 25px rgba(209, 255, 0, 0.15);
+      /* cursor: pointer; */
+    }
+
+    .industry-item img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #cef12b;
+      transition: 0.3s ease;
+    }
+
+    .industry-item span {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .industry-item:hover {
+      color: #CEF12B;
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(207, 255, 0, 0.4);
+    }
+
+    .industry-item:hover img {
+      border-color: #0b0b0b;
+      transform: scale(1.1);
+    }
+
+
+
+    /* features */
+    .feature-sec {
+      background: #0b0b0b;
+      color: #fff;
+      position: relative;
+    }
+
+    .f-card {
+      display: flex;
+      align-items: center;
+      border-radius: 80px;
+      padding: 20px 25px;
+      margin: 25px 0;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+
+    }
+
+    .f-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(209, 255, 0, 0.2);
+    }
+
+    .f-icon {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #CEF12B;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .f-icon i {
+      font-size: 20px;
+      color: #CEF12B;
+    }
+
+    .f-text h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .tags span {
+      display: inline-block;
+      color: #a0a0a0;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .feature-sec .row {
+      align-items: stretch;
+    }
+
+
+
+    .v-line {
+      width: 2px;
+      height: 400px;
+      background-color: #CEF12B;
+    }
+
+    .left .f-card {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .left .f-text {
+      text-align: right;
+    }
+
+    .left .f-icon {
+      margin-left: 25px;
+      font-size: 30px;
+      color: #CEF12B;
+    }
+
+    /* portfolio */
+
+    .portfolio-section {
+      background: radial-gradient(circle at 0% 0%, rgba(204, 255, 0, 0.15), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(204, 255, 0, 0.15), transparent 60%),
+        #0b0b0b;
+      color: #fff;
+      padding: 100px 60px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .subtitle {
+      color: #caff0a;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-title {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    /* Slider base */
+    .portfolio-slider {
+      overflow: hidden;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .slide-track {
+      display: flex;
+      width: calc(420px * 10);
+      animation: scroll 45s linear infinite;
+    }
+
+    .portfolio-item {
+      flex: 0 0 auto;
+      width: 420px;
+      margin-right: 30px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #111;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    /* Hover effects */
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px rgba(204, 255, 0, 0.3);
+    }
+
+    /* Infinite scrolling animation */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-2250px);
+
+      }
+    }
+
+
+    /* scrolling */
+    .services-banner {
+      background-color: #D1FF00;
+      color: #0B0B0B;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 18px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+
+    /* footer */
+    footer .msg {
+      color: white;
+      font-size: 140px;
+      text-decoration: underline;
+      font-weight: bold;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    footer .msg:hover {
+      color: #CEF12B;
+    }
+
+    footer .first p {
+      font-size: 15px;
+
+    }
+
+    footer .icons a {
+      color: white;
+      font-size: 16px;
+      background-color: #303035;
+      margin-right: 15px;
+      height: 35px;
+      width: 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    footer .icons a:hover {
+      color: black;
+      background-color: #CEF12B;
+    }
+
+
+
+    footer h6 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer ul li a:hover {
+      color: #CEF12B;
+    }
+
+    footer .contact i {
+      color: white;
+    }
+
+
+    footer input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #303030;
+      border-radius: 6px;
+      background-color: #303035;
+      color: #fff;
+      outline: none;
+      margin-bottom: 20px;
+    }
+
+    input::placeholder {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    textarea::placeholder {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    input:focus {
+      border-color: #CEF12B;
+    }
+
+    .copy-right {
+      background-color: black;
+      text-align: center;
+      padding: 15px 0;
+      color: white;
+      font-size: 14px;
+      border-top: 1px solid #222;
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 420px;
+      height: 100vh;
+      background: #0b0b0b;
+      color: #fff;
+      z-index: 1050;
+      transition: all 0.4s ease;
+      padding: 3rem;
+      overflow-y: auto;
+    }
+
+    #sidebar-toggle:checked~.sidemenu-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #sidebar-toggle:checked~.sidemenu-overlay .sidebar {
+      right: 0;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .sidebar a:hover {
+      color: #CEF12B;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      font-size: 1.5rem;
+      width: 55px;
+      height: 55px;
+    }
+
+    .sidemenu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 5, 5, 0.97);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      z-index: 1060;
+    }
+
+    /* ===== Search Overlay ===== */
+    .search-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 5, 5, 0.97);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      z-index: 1060;
+    }
+
+    #search-toggle:checked~.search-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .search-box input {
+      width: 60%;
+      background: gray;
+      border: 1px solid white;
+      color: #fff;
+    }
+
+    .close-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* ===== Icons ===== */
+    .side-bar-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 50px;
+      font-size: 20px;
+      transition: transform 0.3s ease-in;
+    }
+
+    .side-bar-icon:hover {
+      transform: translateY(-5px);
+    }
+
+    .bg-lime {
+      background-color: #CEF12B !important;
+    }
+
+    .btn-lime {
+      background-color: #CEF12B;
+      color: #000;
+      border: none;
+    }
+
+    .btn-lime:hover {
+      background-color: #e0ff5e;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="sidebar-toggle" hidden>
+  <input type="checkbox" id="search-toggle" hidden>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dblack py-2 fixed-top">
+    <div class="container d-flex align-items-center justify-content-between g-5">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/images/home/logo/brand.png" alt="Logo" width="140" class="rounded bg-dark p-3" />
+      </a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4 bg-dark px-4 py-2 rounded">
+          <li class="nav-item"><a class="nav-link fs-5" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-5" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-5 active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link fs-5" href="blog.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link fs-5" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-btn d-flex align-items-center gap-4">
+        <label for="search-toggle" class="m-0 p-0" style="cursor:pointer;">
+          <i class="bi bi-search text-white fs-3"></i>
+        </label>
+        <div class="line bg-light" style="width: 1px; height: 25px"></div>
+        <button class="btn btn-lime fw-bold alert-btn">LET'S BUILD TOGETHER</button>
+        <label for="sidebar-toggle" class="m-0 p-0" style="cursor:pointer;">
+          <i class="bi bi-list text-white fs-2"></i>
+        </label>
+      </div>
+    </div>
+  </nav>
+  <div class="sidemenu-overlay">
+    <section class="sidebar">
+      <div class="side-container">
+        <label for="sidebar-toggle"
+          class="close-btn bg-lime text-black fs-4 d-flex align-items-center justify-content-center">
+          <i class="bi bi-x-lg"></i>
+        </label>
+        <img src="/images/home/logo/brand.png" width="125px" alt="" class="mb-3" />
+        <ul class="list-unstyled mt-4">
+          <li><a href="index.html" class="mb-2 text-uppercase fw-bold ">Home</a></li>
+          <li><a href="about.html" class="mb-2 text-uppercase fw-bold ">About Us</a></li>
+          <li><a href="services.html" class="mb-2 text-uppercase fw-bold active">Service</a></li>
+          <li><a href="blog.html" class="mb-2 text-uppercase fw-bold">Blogs</a></li>
+          <li><a href="contact.html" class="mb-2 text-uppercase fw-bold">Contact</a></li>
+        </ul>
+        <button class="btn btn-lime fw-bold my-3 alert-btn">GET IN TOUCH NOW</button>
+        <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Social Links</h5>
+        <div class="d-flex gap-3 mt-2">
+          <a href="https://www.facebook.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-linkedin"></i></a>
+          <a href="https://www.pinterest.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-pinterest"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-youtube"></i></a>
+        </div>
+        <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Subscribe To Newsletter</h5>
+        <div class="position-relative my-3" style="max-width: 350px;">
+          <input type="email" placeholder="Email Address*" class="form-control bg-dark text-white border-0 pe-5 py-4"
+            style="padding-right: 120px;">
+          <button
+            class="btn btn-lime fw-bold position-absolute top-50 end-0 translate-middle-y me-3 alert-btn">SUBSCRIBE</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="search-overlay">
+    <label for="search-toggle"
+      class="close-btn bg-lime text-black fs-4 d-flex align-items-center justify-content-center">
+      <i class="bi bi-x-lg"></i>
+    </label>
+    <div class="search-box">
+      <input type="text" placeholder="Type to search..." class="w-100 form-control form-control-lg text-center">
+    </div>
+  </div>
+  <!-- hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left: Text -->
+        <div class="col-lg-6 col-md-6 col-12 hero-text p-5">
+          <h1 class="text-uppercase fw-bold mb-3 text-lime" data-aos="fade-right" data-aos-duration="2000">Our Services
+          </h1>
+          <h3 class="text-uppercase mb-3" data-aos="fade-left" data-aos-duration="2000">What we do</h3>
+          <p data-aos="fade-right" data-aos-duration="2000">
+            We provide creative design, branding, and development services to help your business grow.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="col-lg-6 hero-img text-center d-flex justify-content-center align-items-end
+            d-none d-lg-flex" data-aos="fade-left" data-aos-duration="2000">
+          <img src="/images/bg-m.png" alt="Blog Page Image" class="img-fluid">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- marquee -->
+  <section class="marquee-sec bg-lime overflow-hidden p-4 text-black">
+    <div class="container">
+      <div class="marquee ">
+        <div class="marquee-inner d-flex">
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+            Entertainment
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+            Entertainment
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- services -->
+  <section class="service p-5 bg-black">
+    <div class="container py-5">
+      <h4 class="text-uppercase text-center text-lime mb-4" data-aos="fade-right" data-aos-duration="2000">
+        <img class="brand-logo" src="/images/home/logo/logo.png" alt="logo"> Driven into Our World
+      </h4>
+      <h1 class="text-uppercase mb-5 text-center text-white" data-aos="fade-left" data-aos-duration="2000">our services
+        for clients</h1>
+
+      <div class="row g-5">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card text-white text-center p-4 bg-dark" data-aos="zoom-in-down" data-aos-duration="2000">
+            <div class="icon mb-3">
+              <i class="bi bi-megaphone-fill"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase mb-2">Social Media Marketing</h5>
+            <p>Connect with your customers and build a strong online presence.</p>
+            <!-- <button class="btn text-uppercase btn-lime">Explore More</button> -->
+            <a href="https://spsvita.netlify.app/pages/home" target="_blank">
+              <button class="btn text-uppercase btn-lime">Explore More</button>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card text-white text-center p-4 bg-dark" data-aos="zoom-in-down" data-aos-duration="2000">
+            <div class="icon mb-3">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase mb-2">SEO Optimization</h5>
+            <p>Improve your search engine ranking and increase organic traffic.</p>
+            <!-- <button class="btn text-uppercase btn-lime">Explore More</button> -->
+            <a href="https://spsvita.netlify.app/pages/home" target="_blank">
+              <button class="btn text-uppercase btn-lime">Explore More</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card text-white text-center p-4 bg-dark" data-aos="zoom-in-down" data-aos-duration="2000">
+            <div class="icon mb-3">
+              <i class="bi bi-journal-text"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase mb-2">Content Marketing</h5>
+            <p>Create engaging digital content to attract your target audience.</p>
+            <!-- <button class="btn text-uppercase btn-lime">Explore More</button> -->
+            <a href="https://spsvita.netlify.app/pages/home" target="_blank">
+              <button class="btn text-uppercase btn-lime">Explore More</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card text-white text-center p-4 bg-dark" data-aos="zoom-in-down" data-aos-duration="2000">
+            <div class="icon mb-3">
+              <i class="bi bi-envelope-paper"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase mb-2">Email Marketing</h5>
+            <p>Reach your customers directly with effective email campaigns.</p>
+            <!-- <button class="btn text-uppercase btn-lime">Explore More</button> -->
+            <a href="https://spsvita.netlify.app/pages/home" target="_blank">
+              <button class="btn text-uppercase btn-lime">Explore More</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card text-white text-center p-4 bg-dark" data-aos="zoom-in-down" data-aos-duration="2000">
+            <div class="icon mb-3">
+              <i class="bi bi-window-stack"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase mb-2">Web Design</h5>
+            <p>Create beautiful and user-friendly websites that convert visitors.</p>
+            <!-- <button class="btn text-uppercase btn-lime">Explore More</button> -->
+            <a href="https://spsvita.netlify.app/pages/home" target="_blank">
+              <button class="btn text-uppercase btn-lime">Explore More</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="service-card text-white text-center p-4 bg-dark" data-aos="zoom-in-down" data-aos-duration="2000">
+            <div class="icon mb-3">
+              <i class="bi bi-bar-chart-line"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase mb-2">Analytics & Reporting</h5>
+            <p>Analyze your performance and optimize strategies for success.</p>
+            <!-- <button class="btn text-uppercase btn-lime">Explore More</button> -->
+            <a href="https://spsvita.netlify.app/pages/home" target="_blank">
+              <button class="btn text-uppercase btn-lime">Explore More</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- industry -->
+  <section class="industries-section text-center text-white p-5">
+    <div class="container">
+      <h4 class="text-uppercase text-center mb-5 text-lime mb-4">
+        <img class="brand-logo" src="/images/home/logo/logo.png" alt="logo">
+        Industries We Serve to the Creativity
+      </h4>
+
+      <div class="industries-scroll">
+        <div class="industry-item"><img src="/images/services/ind1.png"><span>Business Consulting</span></div>
+        <div class="industry-item"><img src="/images/services/ind2.png"><span>Medical Healthcare</span></div>
+        <div class="industry-item"><img src="/images/services/ind3.jpg"><span>Bank/Insurances</span></div>
+        <div class="industry-item"><img src="/images/services/ind4.jpg"><span>SaaS/Software</span></div>
+        <div class="industry-item"><img src="/images/services/ind5.png"><span>Media Entertainment</span></div>
+        <div class="industry-item"><img src="/images/services/ind6.png"><span>Website Design</span></div>
+        <div class="industry-item"><img src="/images/services/ind1.png"><span>Business Consulting</span></div>
+        <div class="industry-item"><img src="/images/services/ind2.png"><span>Medical Healthcare</span></div>
+        <div class="industry-item"><img src="/images/services/ind3.jpg"><span>Bank/Insurances</span></div>
+        <div class="industry-item"><img src="/images/services/ind4.jpg"><span>SaaS/Software</span></div>
+        <div class="industry-item"><img src="/images/services/ind5.png"><span>Media Entertainment</span></div>
+        <div class="industry-item"><img src="/images/services/ind6.png"><span>Website Design</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- features -->
+  <section class="feature-sec p-5">
+    <div class="container p-5">
+      <h4 class="text-uppercase text-center text-lime mb-4" data-aos="fade-up" data-aos-duration="2000">
+        <img class="brand-logo" src="/images/home/logo/logo.png" alt="logo">
+        Empowering Brands with Purpose
+      </h4>
+      <h1 class="text-uppercase mb-5 text-center text-white" data-aos="fade-up" data-aos-duration="2000">
+        Discover What We Create for You
+      </h1>
+
+      <div class="row align-items-center">
+
+        <!-- Left Column -->
+        <div class="col-lg-5 left" data-aos="fade-right" data-aos-duration="2000">
+          <div class="f-card">
+            <div class="f-text">
+              <h3 class="text-end">Branding Identity</h3>
+              <div class="tags text-end">
+                <span>#BrandIdentity</span>
+                <span>#DesignYourBrand</span>
+              </div>
+            </div>
+            <div class="f-icon">
+              <i class="bi bi-envelope-paper"></i>
+            </div>
+          </div>
+
+          <div class="f-card">
+            <div class="f-text">
+              <h3>Creative Design</h3>
+              <div class="tags">
+                <span>#DesignStrategy</span>
+                <span>#ArtDirection</span>
+              </div>
+            </div>
+            <div class="f-icon">
+              <i class="bi bi-pencil-square"></i>
+            </div>
+
+          </div>
+
+          <div class="f-card">
+            <div class="f-text">
+              <h3>Web Solutions</h3>
+              <div class="tags">
+                <span>#Responsive</span>
+                <span>#UIUX</span>
+              </div>
+            </div>
+            <div class="f-icon">
+              <i class="bi bi-globe"></i>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Middle Line -->
+        <div class="col-lg-2 d-flex justify-content-center align-items-stretch" data-aos="fade-up"
+          data-aos-duration="2000">
+          <div class="v-line"></div>
+        </div>
+
+
+        <!-- Right Column -->
+        <div class="col-lg-5" data-aos="fade-left" data-aos-duration="2000">
+          <div class="f-card">
+            <div class="f-icon">
+              <i class="bi bi-camera"></i>
+            </div>
+            <div class="f-text">
+              <h3>Visual Branding</h3>
+              <div class="tags">
+                <span>#Photography</span>
+                <span>#VisualStory</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="f-card">
+            <div class="f-icon">
+              <i class="bi bi-bar-chart"></i>
+            </div>
+            <div class="f-text">
+              <h3>Marketing Strategy</h3>
+              <div class="tags">
+                <span>#SEO</span>
+                <span>#GrowthDesign</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="f-card">
+            <div class="f-icon">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <div class="f-text">
+              <h3>Brand Activation</h3>
+              <div class="tags">
+                <span>#Launch</span>
+                <span>#DigitalPresence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- portfoli -->
+  <section class="portfolio-section">
+    <div class="container">
+      <h4 class="text-uppercase text-center text-lime mb-4" data-aos="fade-up" data-aos-duration="2000">
+        <img class="brand-logo" src="/images/home/logo/logo.png" alt="logo" width="25" class="me-2 align-middle">What
+        our clients say
+      </h4>
+      <h1 class="text-uppercase text-white fw-bold text-center" data-aos="fade-up" data-aos-duration="2000">OUR
+        PORTFOLIO SHOWCASE</h1>
+
+
+      <div class="portfolio-slider">
+        <div class="slide-track">
+          <div class="portfolio-item"><img src="/images/services/portfolio-img1.png" alt="Portfolio 1"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img2.png" alt="Portfolio 2"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img3.png" alt="Portfolio 3"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img1.png" alt="Portfolio 4"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img2.png" alt="Portfolio 5"></div>
+
+          <!-- Duplicate slides for infinite loop effect -->
+          <div class="portfolio-item"><img src="/images/services/portfolio-img1.png" alt="Portfolio 1"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img2.png" alt="Portfolio 2"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img3.png" alt="Portfolio 3"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img1.png" alt="Portfolio 4"></div>
+          <div class="portfolio-item"><img src="/images/services/portfolio-img2.png" alt="Portfolio 5"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- marquee -->
+  <section class="marquee-sec bg-lime overflow-hidden p-4 text-black">
+    <div class="container">
+      <div class="marquee ">
+        <div class="marquee-inner d-flex">
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+            Entertainment
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+            Entertainment
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+          </h4>
+          <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="bg-black text-white pt-5">
+    <div class="container footer">
+      <p class="text-uppercase text-center msg">get in touch</p>
+      <div class="row p-3 p-md-5 p-lg-5 g-3">
+        <div class="col-lg-3">
+          <div class="first">
+            <h4 class="text-uppercase text-lime mb-2">
+              <img src="/images/home/logo/brand2.png" alt="logo" width="140" class="">
+            </h4>
+            <p class=" text-white lh-base">At Renev, we believe that every business has the potential to the
+              thrive with the right
+              guidance.
+            </p>
+            <div class="icons">
+              <a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://pk.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="second">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="about.html">About Us Section</a></li>
+              <li><a href="services.html">Service Section</a></li>
+              <li><a href="blog.html">Blog Section</a></li>
+              <li><a href="blog.html">Pricing Plan Section</a></li>
+              <li><a href="contact.html">Contact Us Section</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="third">
+            <h5>Contact Us</h5>
+            <ul class="contact">
+              <li><a href=""><i class="bi bi-telephone me-2"></i>+1 123 456 7890</a></li>
+              <li><a href=""><i class="bi bi-geo-alt me-2"></i>421 Allen, Mexico 4233</a></li>
+              <li><a href=""><i class="bi bi-envelope me-2"></i>renevagency@com</a></li>
+              <li><a href=""><i class="bi bi-globe me-2"></i>renevagency.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="forth">
+            <h6 class="my-3">Join Newsletter</h6>
+            <div class="footer-input">
+              <input type="email" placeholder="Email">
+              <button class="btn btn-lime alert-btn" type="submit">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      <p>&copy Copyright 2024 - Renev. All Right Reserved</p>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelectorAll(".alert-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        alert("Button clicked!");
+      });
+    });
+  </script>
+</body>
+
+</html>

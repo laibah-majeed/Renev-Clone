@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Renev</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .bg-lime {
+      background-color: #CEF12B !important;
+    }
+
+    .text-lime {
+      color: #CEF12B !important;
+    }
+
+    .bg-dblack {
+      background-color: #0b0b0b !important;
+    }
+
+    .text-dblack {
+      color: #0b0b0b !important;
+    }
+
+    .bg-gray {
+      background-color: #18191e !important;
+    }
+
+    .text-gray {
+      color: #18191e !important;
+    }
+
+    .btn-lime {
+      background-color: #CEF12B !important;
+      color: black !important;
+      font-weight: 700 !important;
+      border: none !important;
+      transition: transform 0.3s ease !important;
+      padding: 12px 18px !important;
+    }
+
+    .btn-lime:hover {
+      background-color: white !important;
+      color: black !important;
+      transform: scale(1.05) !important;
+    }
+
+    /* i:hover {
+      cursor: pointer !important;
+      color: #CEF12B !important;
+    } */
+
+    h1 {
+      font-size: 50px !important;
+    }
+
+    h2 {
+      font-size: 38px !important;
+    }
+
+    h3 {
+      font-size: 28px !important;
+    }
+
+    h4 {
+      font-size: 22px !important;
+    }
+
+    h5 {
+      font-size: 18px !important;
+    }
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      letter-spacing: 0.8px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-2250px);
+
+      }
+    }
+
+    .brand-logo {
+      width: 30px;
+      margin-right: 10px;
+      margin-bottom: 3px;
+      color: #CEF12B;
+    }
+
+    i {
+      cursor: pointer;
+    }
+
+    .navbar {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* hero section */
+    .hero {
+      position: relative;
+      color: white;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      background-image: url('../images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: 80px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to left,
+          rgba(205, 241, 43, 0.25),
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.7));
+      z-index: 1;
+    }
+
+    .hero .hero-text {
+      position: relative;
+      z-index: 2;
+      padding: 32px;
+    }
+
+    .hero h1 {
+
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h3 {
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      line-height: 1.6;
+      max-width: 480px;
+    }
+
+    .hero-img {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-img img {
+      width: 60%;
+      max-width: 500px;
+      border-radius: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    /* marquee */
+    .marquee-sec {
+      overflow: hidden;
+    }
+
+    .marquee-inner {
+      gap: 60px;
+      white-space: nowrap;
+      animation: scroll 45s linear infinite;
+    }
+
+    .marquee-section {
+      background-color: #cef12b;
+      color: #000;
+      transform: rotate(-2deg);
+      margin-top: -4rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: marquee 30s linear infinite;
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+
+
+    /* about */
+    .progress {
+      height: 8px;
+      background-color: #cef12b;
+    }
+
+    .progress-bar {
+      background-color: #cef12b;
+      width: 0;
+      transition: width 2s ease-out;
+    }
+
+    .progress-bar.animated {
+      width: var(--progress-width, 0%);
+    }
+
+    /* result-sec */
+    .result-sec {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background-image: url('/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+
+    .stat-card {
+      background-color: #cef12b;
+      border: 1px solid #303035(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 2rem;
+      transition: transform 0.4s ease;
+      /* smooth hover */
+    }
+
+    /* Hover for stat cards */
+    .stat-card:hover {
+      color: #CEF12B;
+      background-color: #CEF12B;
+      border-color: #CEF12B;
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(206, 241, 43, 0.4);
+    }
+
+    /* Hover for industry cards */
+    .industry-card {
+      color: #fff;
+      border: 1px solid #303035(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+    }
+
+    .industry-card:hover {
+      color: #CEF12B;
+      background-color: #CEF12B;
+      border-color: #CEF12B;
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(206, 241, 43, 0.4);
+    }
+
+
+    .video-section {
+      border: 2px solid #303035(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-section .btn-lime {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+
+    .team .card-img .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(to top, rgba(205, 241, 43, 0.535), transparent);
+      transition: height 0.4s ease;
+      border-radius: 14px;
+      padding-bottom: 20px;
+      opacity: 0;
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 400px;
+      /* fix height */
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+
+    .card-img .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: linear-gradient(to top, rgba(206, 241, 43, 0.7), transparent);
+      transition: height 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 20px;
+      border-radius: 14px;
+    }
+
+    .card:hover .overlay {
+      height: 100%;
+      opacity: 1;
+    }
+
+    .social-icons a {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      color: black;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: black;
+      color: #cef12b;
+    }
+
+    /* ✨ Testimonial Section */
+    .testimonial-section {
+      color: white;
+    }
+
+    .testimonial-card {
+      background: #1b1b1b;
+      border-radius: 15px;
+      padding: 30px 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      height: 100%;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(206, 241, 43, 0.5);
+    }
+
+    .client-img img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-lime, #c8ff00);
+      margin-bottom: 15px;
+    }
+
+    .client-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .client-role {
+      color: var(--color-lime, #c8ff00);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .client-review {
+      font-style: italic;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .stars i {
+      color: var(--color-lime, #c8ff00);
+      margin-right: 3px;
+    }
+
+
+    /* footer */
+    footer .msg {
+      color: white;
+      font-size: 140px;
+      text-decoration: underline;
+      font-weight: bold;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    footer .msg:hover {
+      color: #CEF12B;
+    }
+
+    footer .first p {
+      font-size: 15px;
+
+    }
+
+    footer .icons a {
+      color: white;
+      font-size: 16px;
+      background-color: #303035;
+      margin-right: 15px;
+      height: 35px;
+      width: 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    footer .icons a:hover {
+      color: black;
+      background-color: #CEF12B;
+    }
+
+
+
+    footer h6 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer ul li a:hover {
+      color: #CEF12B;
+    }
+
+    footer .contact i {
+      color: white;
+    }
+
+
+    footer input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #303030;
+      border-radius: 6px;
+      background-color: #303035;
+      color: #fff;
+      outline: none;
+      margin-bottom: 20px;
+    }
+
+    input::placeholder {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    textarea::placeholder {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    input:focus {
+      border-color: #CEF12B;
+    }
+
+    .copy-right {
+      background-color: black;
+      text-align: center;
+      padding: 15px 0;
+      color: white;
+      font-size: 14px;
+      border-top: 1px solid #222;
+    }
+
+    /* progress bar */
+    .progress {
+      height: 10px;
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #CEF12B, #D1FF00);
+      width: 0;
+      height: 100%;
+      border-radius: 10px;
+      animation: fillProgress 3s ease-out forwards;
+    }
+
+    /* Optional subtle glow */
+    .progress-bar::after {
+      content: "";
+      display: block;
+      height: 100%;
+      background: rgba(206, 241, 43, 0.4);
+      filter: blur(10px);
+    }
+
+    /* Animation keyframes */
+    @keyframes fillProgress {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: var(--progress-width);
+      }
+    }
+
+    .team {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background-image: url('/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 420px;
+      height: 100vh;
+      background: #0b0b0b;
+      color: #fff;
+      z-index: 1050;
+      transition: all 0.4s ease;
+      padding: 3rem;
+      overflow-y: auto;
+    }
+
+    #sidebar-toggle:checked~.sidemenu-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #sidebar-toggle:checked~.sidemenu-overlay .sidebar {
+      right: 0;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .sidebar a:hover {
+      color: #CEF12B;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      font-size: 1.5rem;
+      width: 55px;
+      height: 55px;
+    }
+
+    .sidemenu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 5, 5, 0.97);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      z-index: 1060;
+    }
+
+    /* ===== Search Overlay ===== */
+    .search-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 5, 5, 0.97);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      z-index: 1060;
+    }
+
+    #search-toggle:checked~.search-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .search-box input {
+      width: 60%;
+      background: gray;
+      border: 1px solid white;
+      color: #fff;
+    }
+
+    .close-btn i {
+      font-size: 1.2rem;
+    }
+
+    /* ===== Icons ===== */
+    .side-bar-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 50px;
+      font-size: 20px;
+      transition: transform 0.3s ease-in;
+    }
+
+    .side-bar-icon:hover {
+      transform: translateY(-5px);
+    }
+
+    .bg-lime {
+      background-color: #CEF12B !important;
+    }
+
+    .btn-lime {
+      background-color: #CEF12B;
+      color: #000;
+      border: none;
+    }
+
+    .btn-lime:hover {
+      background-color: #e0ff5e;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="checkbox" id="sidebar-toggle" hidden>
+  <input type="checkbox" id="search-toggle" hidden>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dblack py-2 fixed-top">
+    <div class="container d-flex align-items-center justify-content-between g-5">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/images/home/logo/brand.png" alt="Logo" width="140" class="rounded bg-dark p-3" />
+      </a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4 bg-dark px-4 py-2 rounded">
+          <li class="nav-item"><a class="nav-link fs-5" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-5 active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-5" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link fs-5" href="blog.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link fs-5" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-btn d-flex align-items-center gap-4">
+        <label for="search-toggle" class="m-0 p-0" style="cursor:pointer;">
+          <i class="bi bi-search text-white fs-3"></i>
+        </label>
+        <div class="line bg-light" style="width: 1px; height: 25px"></div>
+        <button class="btn btn-lime fw-bold alert-btn">LET'S BUILD TOGETHER</button>
+        <label for="sidebar-toggle" class="m-0 p-0" style="cursor:pointer;">
+          <i class="bi bi-list text-white fs-2"></i>
+        </label>
+      </div>
+    </div>
+  </nav>
+  <div class="sidemenu-overlay">
+    <section class="sidebar">
+      <div class="side-container">
+        <label for="sidebar-toggle"
+          class="close-btn bg-lime text-black fs-4 d-flex align-items-center justify-content-center">
+          <i class="bi bi-x-lg"></i>
+        </label>
+        <img src="/images/home/logo/brand.png" width="125px" alt="" class="mb-3" />
+        <ul class="list-unstyled mt-4">
+          <li><a href="index.html" class="mb-2 text-uppercase fw-bold ">Home</a></li>
+          <li><a href="about.html" class="mb-2 text-uppercase fw-bold active">About Us</a></li>
+          <li><a href="services.html" class="mb-2 text-uppercase fw-bold">Service</a></li>
+          <li><a href="blog.html" class="mb-2 text-uppercase fw-bold">Blogs</a></li>
+          <li><a href="contact.html" class="mb-2 text-uppercase fw-bold">Contact</a></li>
+        </ul>
+        <button class="btn btn-lime fw-bold my-3 alert-btn">GET IN TOUCH NOW</button>
+        <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Social Links</h5>
+        <div class="d-flex gap-3 mt-2">
+          <a href="https://www.facebook.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-linkedin"></i></a>
+          <a href="https://www.pinterest.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-pinterest"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i
+              class="side-bar-icon bg-lime rounded-circle text-black bi bi-youtube"></i></a>
+        </div>
+        <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Subscribe To Newsletter</h5>
+        <div class="position-relative my-3" style="max-width: 350px;">
+          <input type="email" placeholder="Email Address*" class="form-control bg-dark text-white border-0 pe-5 py-4"
+            style="padding-right: 120px;">
+          <button
+            class="alert-btn btn btn-lime fw-bold position-absolute top-50 end-0 translate-middle-y me-3">SUBSCRIBE</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="search-overlay">
+    <label for="search-toggle"
+      class="close-btn bg-lime text-black fs-4 d-flex align-items-center justify-content-center">
+      <i class="bi bi-x-lg"></i>
+    </label>
+    <div class="search-box">
+      <input type="text" placeholder="Type to search..." class="w-100 form-control form-control-lg text-center">
+    </div>
+  </div>
+
+  <main>
+    <!-- hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left: Text -->
+          <div class="col-lg-6 col-md-6 col-12 hero-text p-5">
+            <h1 class="text-uppercase fw-bold mb-3 text-lime" data-aos="fade-right" data-aos-duration="2000">About Us
+            </h1>
+            <h3 class="text-uppercase mb-3" data-aos="fade-left" data-aos-duration="2000">Who we are</h3>
+            <p data-aos="fade-right" data-aos-duration="2000">
+              We are a passionate creative team dedicated to building meaningful brand experiences through design,
+              strategy, and innovation.
+            </p>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="col-lg-6 hero-img text-center d-flex justify-content-center align-items-end
+            d-none d-lg-flex" data-aos="fade-left" data-aos-duration="2000">
+            <img src="/images/bg-m.png" alt="Blog Page Image" class="img-fluid">
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- marquee -->
+    <section class="marquee-sec bg-lime overflow-hidden p-4 text-black">
+      <div class="container">
+        <div class="marquee ">
+          <div class="marquee-inner d-flex">
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+            </h4>
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+              Entertainment
+            </h4>
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+            </h4>
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+            </h4>
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+            </h4>
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+              Entertainment
+            </h4>
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+            </h4>
+            <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- other -->
+    <section class="py-5 bg-dblack">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="flip-right" data-aos-duration="2000">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+              alt="Team discussing a project" class="img-fluid rounded-4">
+          </div>
+          <div class="col-lg-6">
+            <h4 class="text-uppercase text-lime" data-aos="fade-right" data-aos-duration="2000"><img class="brand-logo"
+                src="/images/home/logo/logo.png" alt="logo">driven to the creativity</h4>
+            <h1 class="text-uppercase text-white" data-aos="fade-right" data-aos-duration="2000">crafting website with
+            </h1>
+            <h1 class="text-uppercase text-white" data-aos="fade-right" data-aos-duration="2000">purpose and passions
+            </h1>
+
+            <p class="text-white mb-5" data-aos="fade-left" data-aos-duration="2000">Our team of designers, developers,
+              and strategists are passionate about
+              bringing your brand's vision to life through innovative user.</p>
+
+            <div class="mb-4" data-aos="fade-left" data-aos-duration="2000">
+              <div class="d-flex justify-content-between mb-2 fw-bold">
+                <span class="text-white">User Interface Designer</span>
+                <span class="text-white">98%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="--progress-width: 98%;" aria-valuenow="98"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="mb-5" data-aos="fade-left" data-aos-duration="2000">
+              <div class="d-flex justify-content-between mb-2 fw-bold">
+                <span class="text-white">WordPress Developer</span>
+                <span class="text-white">99%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="--progress-width: 99%;" aria-valuenow="99"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <a href="#" class="alert-btn btn btn-lime" data-aos="fade-left" data-aos-duration="2000">SCHEDULE A
+              CONSULTATION</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- results -->
+    <section class="result-sec py-5">
+      <div class="container">
+        <h4 class="text-uppercase text-lime text-center mb-4" data-aos="fade-up" data-aos-duration="2000"><img
+            class="brand-logo" src="/images/home/logo/logo.png" alt="logo">driven
+          to the creativity</h4>
+        <h1 class="text-uppercase text-white text-center" data-aos="fade-up" data-aos-duration="2000">crafting website
+          with</h1>
+        <div class="row g-4 py-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-card text-center bg-dblack" data-aos="zoom-in-up" data-aos-duration="2000">
+              <h3 class="display-3 fw-bolder text-lime">99%</h3>
+              <p class="text-secondary text-white">SATISFACTION RATE</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-card text-center bg-dblack" data-aos="zoom-in-up" data-aos-duration="2000">
+              <h3 class="display-3 fw-bolder text-lime">80%</h3>
+              <p class="text-secondary text-white">ENGAGEMENT BY</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-card text-center bg-dblack" data-aos="zoom-in-up" data-aos-duration="2000">
+              <h3 class="display-3 fw-bolder text-lime">200+</h3>
+              <p class="text-secondary text-white">WEBSITE LAUNCHED</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="stat-card text-center bg-dblack" data-aos="zoom-in-up" data-aos-duration="2000">
+              <h3 class="display-3 fw-bolder text-lime">76+</h3>
+              <p class="text-secondary text-white">INDUSTRY AWARDS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ind-sec py-5 text-center bg-dblack">
+      <div class="container py-5 ">
+        <h4 class="text-uppercase text-center mb-5 text-lime mb-4" data-aos="zoom-in-up" data-aos-duration="2000">
+          <img class="brand-logo" src="/images/home/logo/logo.png" alt="logo">
+          Industries We Serve to the Creativity
+        </h4>
+        <div class="d-flex flex-wrap justify-content-center gap-5 mt-4">
+          <div class="industry-card bg-dark" data-aos="zoom-in-up" data-aos-duration="2000">MEDICAL HEALTHCARE</div>
+          <div class="industry-card bg-dark" data-aos="zoom-in-up" data-aos-duration="2000">BANK/INSURANCES</div>
+          <div class="industry-card bg-dark" data-aos="zoom-in-up" data-aos-duration="2000">SASS/SOFTWARE</div>
+          <div class="industry-card bg-dark" data-aos="zoom-in-up" data-aos-duration="2000">MEDIA ENTERTAINMENT</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-dark">
+      <div class="container text-center">
+        <div class="video-section position-relative">
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/jgfq8OybWZQ?si=S9PVFBoyZGfhO3ej"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          <a href="https://youtu.be/jgfq8OybWZQ" target="_blank"
+            class="btn btn-lime btn-lg mt-4 d-inline-flex align-items-center gap-2">
+            <i class="bi bi-play-circle fs-3"></i>
+            <span>PLAY VIDEO</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="py-5 text-center team bg-dblack">
+      <div class="container">
+        <h4 class="text-uppercase text-lime text-center mb-4" data-aos="zoom-in-up" data-aos-duration="2000"><img
+            class="brand-logo" src="/images/home/logo/logo.png" alt="logo">MEET OUR TEAM</h4>
+        <h1 class="text-uppercase text-white text-center" data-aos="zoom-in-up" data-aos-duration="2000">OUR EXPERIENCED
+          TEAM</h1>
+
+
+        <div class="row g-4 py-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-transparent border-0 " data-aos="fade-up" data-aos-duration="2000">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="">
+                <div class="overlay">
+                  <div class="social-icons d-flex gap-2 mb-3">
+                    <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+                    <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="text-uppercase text-white">John Anderson</h5>
+                <h6 class="text-white">UI/UX Designer</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-transparent border-0" data-aos="fade-down" data-aos-duration="2000">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="">
+                <div class="overlay">
+                  <div class="social-icons d-flex gap-2 mb-3">
+                    <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+                    <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="text-uppercase text-white">Judit Rodriguez</h5>
+                <h6 class="text-white">SEO Marketer</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-transparent border-0" data-aos="fade-up" data-aos-duration="2000">
+              <div class="card-img">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="">
+                <div class="overlay">
+                  <div class="social-icons d-flex gap-2 mb-3">
+                    <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+                    <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="text-uppercase text-white">Sarah Miller</h5>
+                <h6 class="text-white">CEO-Founder</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-transparent border-0" data-aos="fade-down" data-aos-duration="2000">
+              <div class="card-img">
+                <img
+                  src="https://www.simplilearn.com/ice9/free_resources_article_thumb/How-to-become-a-complete-Web-Development-Professional.jpg"
+                  alt="">
+                <div class="overlay">
+                  <div class="social-icons d-flex gap-2 mb-3">
+                    <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+                    <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="text-uppercase text-white">Autumn Phillips</h5>
+                <h6 class="text-white">WP Developer</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ✨ Testimonial Section Start -->
+    <section class="py-5 testimonial-section text-center bg-dblack">
+      <div class="container py-5">
+        <h4 class="text-uppercase text-lime text-center mb-4" data-aos="fade-right" data-aos-duration="2000"><img
+            class="brand-logo" src="/images/home/logo/logo.png" alt="logo">WHAT OUR CLIENTS SAY</h4>
+        <h1 class="text-uppercase text-white text-center mb-4" data-aos="fade-left" data-aos-duration="2000">
+          TESTIMONIALS</h1>
+
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4">
+            <div class="testimonial-card bg-dark" data-aos="flip-right" data-aos-duration="2000">
+              <div class="client-img">
+                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Client 1">
+              </div>
+              <h5 class="client-name">Sarah Johnson</h5>
+              <p class="client-role">Marketing Director</p>
+              <div class="stars mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="client-review">
+                “This team transformed our brand digitally! Their professionalism and creativity are unmatched.”
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-4">
+            <div class="testimonial-card bg-dark" data-aos="flip-right" data-aos-duration="2000">
+              <div class="client-img">
+                <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126" alt="Client 2">
+              </div>
+              <h5 class="client-name">Michael Smith</h5>
+              <p class="client-role">CEO, StartTech</p>
+              <div class="stars mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="client-review">
+                “Exceptional service and top-notch results. They delivered more than we expected!”
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-4">
+            <div class="testimonial-card bg-dark" data-aos="flip-right" data-aos-duration="2000">
+              <div class="client-img">
+                <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36" alt="Client 3">
+              </div>
+              <h5 class="client-name">Emily Davis</h5>
+              <p class="client-role">Product Designer</p>
+              <div class="stars mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="client-review">
+                “Creative, reliable, and friendly! Loved working with this amazing team.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ✨ Testimonial Section End -->
+    <!-- footer -->
+    <!-- footer -->
+    <footer class="bg-black text-white pt-5">
+      <div class="container footer">
+        <p class="text-uppercase text-center msg alert-btn">get in touch</p>
+        <div class="row p-3 p-md-5 p-lg-5 g-3">
+          <div class="col-lg-3">
+            <div class="first">
+              <h4 class="text-uppercase text-lime mb-2">
+                <img src="/images/home/logo/brand2.png" alt="logo" width="140" class="">
+              </h4>
+              <p class=" text-white lh-base">At Renev, we believe that every business has the potential to the
+                thrive with the right
+                guidance.
+              </p>
+              <div class="icons">
+                <a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://pk.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="second">
+              <h5>Quick Links</h5>
+              <ul>
+                <li><a href="about.html">About Us Section</a></li>
+                <li><a href="services.html">Service Section</a></li>
+                <li><a href="blog.html">Blog Section</a></li>
+                <li><a href="blog.html">Pricing Plan Section</a></li>
+                <li><a href="contact.html">Contact Us Section</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="third">
+              <h5>Contact Us</h5>
+              <ul class="contact">
+                <li><a href=""><i class="bi bi-telephone me-2"></i>+1 123 456 7890</a></li>
+                <li><a href=""><i class="bi bi-geo-alt me-2"></i>421 Allen, Mexico 4233</a></li>
+                <li><a href=""><i class="bi bi-envelope me-2"></i>renevagency@com</a></li>
+                <li><a href=""><i class="bi bi-globe me-2"></i>renevagency.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="forth">
+              <h6 class="my-3">Join Newsletter</h6>
+              <div class="footer-input">
+                <input type="email" placeholder="Email">
+                <button class="alert-btn btn btn-lime" type="submit">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy Copyright 2024 - Renev. All Right Reserved</p>
+      </div>
+    </footer>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelectorAll(".alert-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        alert("Button clicked!");
+      });
+    });
+  </script>
+</body>
+
+</html>

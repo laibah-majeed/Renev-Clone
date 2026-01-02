@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Reven</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="sidebar-toggle" hidden>
+    <input type="checkbox" id="search-toggle" hidden>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dblack py-2 fixed-top">
+        <div class="container d-flex align-items-center justify-content-between g-5">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/images/home/logo/brand.png" alt="Logo" width="140" class="rounded bg-dark p-3" />
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-4 bg-dark px-4 py-2 rounded">
+                    <li class="nav-item"><a class="nav-link fs-5 active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="blog.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-btn d-flex align-items-center gap-4">
+                <label for="search-toggle" class="m-0 p-0" style="cursor:pointer;">
+                    <i class="bi bi-search text-white fs-3"></i>
+                </label>
+                <div class="line bg-light d-none d-lg-block d-md-block" style="width: 1px; height: 25px"></div>
+                <button class="alert-btn btn btn-lime fw-bold d-none d-lg-block d-md-block">LET'S BUILD
+                    TOGETHER</button>
+                <label for="sidebar-toggle" class="m-0 p-0" style="cursor:pointer;">
+                    <i class="bi bi-list text-white fs-2"></i>
+                </label>
+            </div>
+        </div>
+    </nav>
+    <div class="sidemenu-overlay">
+        <section class="sidebar">
+            <div class="side-container">
+                <label for="sidebar-toggle"
+                    class="close-btn bg-lime text-black fs-4 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-x-lg"></i>
+                </label>
+                <img src="/images/home/logo/brand.png" width="125px" alt="" class="mb-3" />
+                <ul class="list-unstyled mt-4">
+                    <li><a href="index.html" class="mb-2 text-uppercase fw-bold active">Home</a></li>
+                    <li><a href="about.html" class="mb-2 text-uppercase fw-bold">About Us</a></li>
+                    <li><a href="services.html" class="mb-2 text-uppercase fw-bold">Service</a></li>
+                    <li><a href="blog.html" class="mb-2 text-uppercase fw-bold">Blogs</a></li>
+                    <li><a href="contact.html" class="mb-2 text-uppercase fw-bold">Contact</a></li>
+                </ul>
+                <button class="alert-btn btn btn-lime fw-bold my-3">GET IN TOUCH NOW</button>
+                <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Social Links</h5>
+                <div class="d-flex gap-3 mt-2">
+                    <a href="https://www.facebook.com" target="_blank"><i
+                            class="side-bar-icon bg-lime rounded-circle text-black bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i
+                            class="side-bar-icon bg-lime rounded-circle text-black bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i
+                            class="side-bar-icon bg-lime rounded-circle text-black bi bi-linkedin"></i></a>
+                    <a href="https://www.pinterest.com" target="_blank"><i
+                            class="side-bar-icon bg-lime rounded-circle text-black bi bi-pinterest"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i
+                            class="side-bar-icon bg-lime rounded-circle text-black bi bi-youtube"></i></a>
+                </div>
+                <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Subscribe To Newsletter</h5>
+                <div class="position-relative my-3" style="max-width: 350px;">
+                    <input type="email" placeholder="Email Address*"
+                        class="form-control bg-dark text-white border-0 pe-5 py-4" style="padding-right: 120px;">
+                    <button
+                        class="alert-btn btn btn-lime fw-bold position-absolute top-50 end-0 translate-middle-y me-3">SUBSCRIBE</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="search-overlay">
+        <label for="search-toggle"
+            class="close-btn bg-lime text-black fs-4 d-flex align-items-center justify-content-center">
+            <i class="bi bi-x-lg"></i>
+        </label>
+        <div class="search-box">
+            <input type="text" placeholder="Type to search..." class="w-100 form-control form-control-lg text-center">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-stretch g-5">
+                <div class=" col-lg-8">
+                    <div data-aos="fade-up" data-aos-duration="2000"
+                        class="upper slide-up bg-lime rounded-4 rounded-md-5 rounded-lg-5 px-3 py-4 p-md-5 p-lg-5 d-flex align-items-center justify-content-between flex-wrap">
+                        <div class="text">
+                            <h5 class="fw-bold text-uppercase   mb-1 text-black">
+
+                                Designing the Future of Your Brand
+                            </h5>
+                            <h1 class="fw-bold text-uppercase mb-1 text-black  ">Elevates Your Brand</h1>
+                            <h1 class="fw-bold text-uppercase mb-0 text-black  ">Stunning Web Design</h1>
+                        </div>
+
+                        <div class="image d-none d-md-flex d-lg-flex">
+                            <img src="/images/home/hero/h-img4.png " alt="" class="rotate">
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-up" data-aos-duration="2000" class="lower slide-up d-none d-md-flex d-lg-flex">
+                        <img src="/images/home/hero/hero2.png" alt=""
+                            class="img-fluid rounded-4 rounded-md-5 rounded-lg-5 mt-4" />
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="col-lg-4 d-flex justify-content-end">
+                    <div data-aos="fade-right" data-aos-duration="1000"
+                        class=" form-wrapper slide-left rounded-4 rounded-md-5 rounded-lg-5 mx-3 position-relative d-flex align-items-end justify-content-center overflow-hidden">
+                        <!-- <div class="form-container m-4 p-4 bg-dblack text-white position-relative rounded-4">
+                            <h3 class="text-center fw-semibold mb-3 ">Schedule Appointment</h3>
+                            <form>
+                                <input class="bg-gray border-0 text-white rounded-2  mb-3" type="text"
+                                    placeholder="Full Name" required />
+                                <input class="bg-gray border-0 text-white rounded-2 mb-3" type="email"
+                                    placeholder="Email Address" required />
+                                <select class="bg-gray border-0 text-white rounded-2 mb-3" required>
+                                    <option value="" disabled selected>Service Type</option>
+                                    <option>Dranding & Identity</option>
+                                    <option>Web Design & Development</option>
+                                    <option>Digital Marketing</option>
+                                    <option>Graphic Design</option>
+                                    <option>UI/UX Design</option>
+                                </select>
+                                <textarea class="bg-gray border-0 text-white rounded-2 mb-2"
+                                    placeholder="Message"></textarea>
+                                <button type="submit" class="btn btn-lime text-uppercase rounded-2 fw-bold">Submit
+                                    Now</button>
+                            </form>
+                        </div> -->
+                        <div class="form-container m-4 p-4 bg-dblack text-white position-relative rounded-4">
+                            <h3 class="text-center fw-semibold mb-3 ">Schedule Appointment</h3>
+
+                            <form id="appointmentForm" novalidate>
+                                <div class="mb-3">
+                                    <input id="fullName" class="bg-gray border-0 text-white rounded-2 w-100" type="text"
+                                        placeholder="Full Name" />
+                                    <small class="text-danger" id="nameError"></small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <input id="email" class="bg-gray border-0 text-white rounded-2 w-100" type="email"
+                                        placeholder="Email Address" />
+                                    <small class="text-danger" id="emailError"></small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <select id="service" class="bg-gray border-0 text-white rounded-2 w-100">
+                                        <option value="" disabled selected>Service Type</option>
+                                        <option>Branding & Identity</option>
+                                        <option>Web Design & Development</option>
+                                        <option>Digital Marketing</option>
+                                        <option>Graphic Design</option>
+                                        <option>UI/UX Design</option>
+                                    </select>
+                                    <small class="text-danger" id="serviceError"></small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <textarea id="message" class="bg-gray border-0 text-white rounded-2 w-100"
+                                        placeholder="Message (at least 15 characters)"></textarea>
+                                    <small class="text-danger" id="messageError"></small>
+                                </div>
+
+                                <button type="submit" class="btn btn-lime text-uppercase rounded-2 fw-bold w-100">
+                                    Submit Now
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- marquee -->
+    <section class="marquee-sec bg-lime overflow-hidden p-4 text-black">
+        <div class="container">
+            <div class="marquee ">
+                <div class="marquee-inner d-flex">
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+                        Entertainment
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+                        Entertainment
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about -->
+    <section class="about-sec bg-dblack p-2 ">
+        <div class="container p-md-5 p-lg-5 px-3">
+            <div class="row g-5 align-content-stretch">
+                <div class="col-lg-6">
+                    <div class="about-left d-none d-md-flex d-lg-flex justify-content-start align-items-start ">
+                        <img src="/images/home/hero/h-img1.png" data-aos="fade-up" data-aos-duration="2000"
+                            class="slide-down   rounded-3 mb-5" height="400px" alt="">
+                        <img src="/images/home/hero/h-img2.png" data-aos="fade-down" data-aos-duration="2000"
+                            class="slide-up   rounded-3 mt-5" height="400px" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div data-aos="fade-right" data-aos-duration="2000"
+                        class="d-flex flex-column justify-content-center">
+                        <h4 class="text-uppercase text-lime"><img class="brand-logo" src="/images/home/logo/logo.png"
+                                alt="logo">driven to the creativity</h4>
+                        <h1 class="text-uppercase text-white">crafting website with</h1>
+                        <h1 class="text-uppercase text-white">purpose and passions</h1>
+                        <p>Our team of designers, developers, and strategists are passionate about
+                            bringing your brand’s
+                            vision to life through innovative user.</p>
+                        <div class="about-rate d-flex justify-content-center align-items-center">
+                            <div class="rate  text-white text-center p-3 mx-1">
+                                <h3>99%</h3>
+                                <p>Boost Engagement</p>
+                            </div>
+                            <div class="line rounded-2"></div>
+                            <div class="rate  text-white text-center p-3 mx-1">
+                                <h3>100%</h3>
+                                <p>Increase Conversion</p>
+                            </div>
+                            <div class="line rounded-2"></div>
+                            <div class="rate  text-white text-center p-3 mx-1">
+                                <h3>600+</h3>
+                                <p>Website Launch</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000"
+                        class="alert-btn mb-5 about-btn btn btn-lime">
+                        schedule a consultation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services -->
+    <section class="services-sec p-2">
+        <div class="container p-md-4 p-lg-5 p-3">
+            <div class="services text-white">
+                <div class="ser-text" data-aos="fade-up" data-aos-duration="2000">
+                    <h4 class="text-uppercase text-md-center text-lg-center text-start text-lime"><img
+                            class="brand-logo" src="/images/home/logo/logo.png" alt="logo">Driven
+                        to the Creativity</h4>
+                    <h1 class="text-uppercase text-md-center text-lg-center text-start mb-4 mb-md-5 mb-lg-5">Our Web
+                        Design Services</h1>
+                </div>
+                <!-- Service Card 1 -->
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    class="ser-card row align-items-center justify-content-around py-3 py-md-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0">
+                        <div class="ser-text text-start">
+                            <h2 class="text-uppercase fw-bold mb-3">Branding Identity</h2>
+                            <div class="tags d-flex flex-wrap gap-2 justify-content-start justify-content-md-start ">
+                                <span class="tag">#BrandIdentityDesign</span>
+                                <span class="tag">#DesignYourBrand</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="ser-img d-none d-md-flex d-lg-flex justify-content-center align-items-md-center justify-content-md-center align-items-md-center">
+                            <img class="m-3 rounded-4" src="/images/home/hero/h-img2.png" alt="Branding Identity">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-4 text-start text-md-center  text-lg-center mt-3 mt-lg-0">
+                        <div class="ser-icon d-inline-flex justify-content-center align-items-center">
+                            <!-- <i class="bi bi-arrow-up-right"></i> -->
+                            <a href="https://spsnepra.netlify.app/" target="_blank" class="text-black arrow-link">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    class="ser-card row align-items-center justify-content-around py-3 py-md-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0">
+                        <div class="ser-text text-start">
+                            <h2 class="text-uppercase fw-bold mb-3">E-commerce Shop</h2>
+                            <div class="tags d-flex flex-wrap gap-2 justify-content-start justify-content-md-start ">
+                                <span class="tag">#EcommerceExperts</span>
+                                <span class="tag">#DesignYourBrand</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="ser-img d-none d-md-flex d-lg-flex justify-content-center align-items-md-center justify-content-md-center align-items-md-center">
+                            <img class="m-3 rounded-4" src="/images/home/hero/h-img2.png" alt="Branding Identity">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-4 text-start text-md-center  text-lg-center mt-3 mt-lg-0">
+                        <div class="ser-icon d-inline-flex justify-content-center align-items-center">
+                            <!-- <i class="bi bi-arrow-up-right"></i> -->
+                            <a href="https://spsnepra.netlify.app/" target="_blank" class="text-black arrow-link">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    class="ser-card row align-items-center justify-content-around py-3 py-md-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0">
+                        <div class="ser-text text-start">
+                            <h2 class="text-uppercase fw-bold mb-3">UI/UX Designer</h2>
+                            <div class="tags d-flex flex-wrap gap-2 justify-content-start justify-content-md-start ">
+                                <span class="tag">#DesignInspiration</span>
+                                <span class="tag">#UserCenteredDesign</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="ser-img d-none d-md-flex d-lg-flex justify-content-center align-items-md-center justify-content-md-center align-items-md-center">
+                            <img class="m-3 rounded-4" src="/images/home/hero/h-img2.png" alt="Branding Identity">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-4 text-start text-md-center  text-lg-center mt-3 mt-lg-0">
+                        <div class="ser-icon d-inline-flex justify-content-center align-items-center">
+                            <!-- <i class="bi bi-arrow-up-right"></i> -->
+                            <a href="https://spsnepra.netlify.app/" target="_blank" class="text-black arrow-link">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 4 -->
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    class="ser-card row align-items-center justify-content-around py-3 py-md-4">
+                    <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0">
+                        <div class="ser-text text-start">
+                            <h2 class="text-uppercase fw-bold mb-3">Digital Marketing</h2>
+                            <div class="tags d-flex flex-wrap gap-2 justify-content-start justify-content-md-start ">
+                                <span class="tag">#WebDev</span>
+                                <span class="tag">#FrontendDev</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div
+                            class="ser-img d-none d-md-flex d-lg-flex justify-content-center align-items-md-center justify-content-md-center align-items-md-center">
+                            <img class="m-3 rounded-4" src="/images/home/hero/h-img2.png" alt="Branding Identity">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-4 text-start text-md-center  text-lg-center mt-3 mt-lg-0">
+                        <div class="ser-icon d-inline-flex justify-content-center align-items-center">
+                            <!-- <i class="bi bi-arrow-up-right"></i> -->
+                            <a href="https://spsnepra.netlify.app/" target="_blank" class="text-black arrow-link">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio -->
+    <section class="portfolio-sec bg-dblack p-4">
+        <div class="container p-md-4 p-lg-5 p-3">
+            <div class="portfolio text-center">
+                <div class="p-text   " data-aos="zoom-in-up" data-aos-duration="2000">
+                    <h4 class="text-uppercase text-md-center text-lg-center text-start  text-lime">
+                        <img class="brand-logo" src="/images/home/logo/logo.png" alt="logo">
+                        Our Portfolio
+                    </h4>
+                    <h1 class="text-uppercase text-md-center text-lg-center text-start mb-4 mb-md-5 mb-lg-5 text-white">
+                        Our portfolio showcase
+                    </h1>
+                </div>
+                <div class="p-cards py-2">
+                    <div class="row g-4">
+                        <!-- <div class="col-lg-4" data-aos="zoom-in-up" data-aos-duration="2000">
+                            <div class="card scale-in   position-relative overflow-hidden bg-gray rounded-3 p-2">
+                                <img class="rounded-3" src="/images/home/portfolio/p-img1.png" alt="">
+                            </div>
+                        </div> -->
+                        <div class="col-lg-4" data-aos="zoom-in-up" data-aos-duration="2000">
+                            <a href="https://spsnepra.netlify.app/" target="_blank" class="portfolio-link">
+                                <div class="card scale-in position-relative overflow-hidden bg-gray rounded-3 p-2">
+                                    <img class="rounded-3" src="/images/home/portfolio/p-img1.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4" data-aos="zoom-in-up" data-aos-duration="2000">
+                            <div class="card scale-in   position-relative overflow-hidden bg-gray rounded-3 p-2">
+                                <img class="rounded-3" src="/images/home/portfolio/p-img2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4" data-aos="zoom-in-up" data-aos-duration="2000">
+                            <div class="card scale-in   position-relative overflow-hidden bg-gray rounded-3 p-2">
+                                <img class="rounded-3" src="/images/home/portfolio/p-img3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="2000">
+                            <div class="card scale-in   position-relative overflow-hidden bg-gray rounded-3 p-2">
+                                <img class="rounded-3" src="/images/home/portfolio/p-img4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="2000">
+                            <div class="card scale-in   position-relative overflow-hidden bg-gray rounded-3 p-2">
+                                <img class="rounded-3" src="/images/home/portfolio/p-img5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="2000"></div>
+                <button class="alert-btn btn btn-lime text-uppercase mt-4">
+                    view more showcase
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- team -->
+    <section class="team-sec p-2">
+        <div class="container p-md-4 p-lg-5 p-3">
+            <div class="team">
+                <div class="t-top p-3 row align-items-center justify-content-between">
+                    <div class="col-md-6   " data-aos="fade-right" data-aos-duration="2000">
+                        <h4 class="text-uppercase mb-2 text-lime">
+                            <img class="brand-logo me-2" src="/images/home/logo/logo.png" alt="logo">
+                            Designers, Developers, and Innovators
+                        </h4>
+                        <h1 class="text-uppercase mb-3 text-white">Web Design Experts</h1>
+                    </div>
+
+                    <!-- Progress Circles Section -->
+                    <div class="p-0 col-md-6 d-flex justify-content-start align-items-start justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center flex-wrap gap-2"
+                        data-aos="fade-left" data-aos-duration="2000">
+
+                        <!-- Satisfaction Rate -->
+                        <div class="progressbar d-flex align-items-center">
+                            <div class="circle d-flex align-items-center justify-content-center position-relative me-3"
+                                data-percent="96">
+                                <canvas width="90" height="90" style="height: 80px; width: 80px;"></canvas>
+                                <div class="count position-absolute fw-bold text-white">96%</div>
+                            </div>
+                            <div class="content-area">
+                                <h4 class="text-white fw-bold mb-0">Satisfaction Rate</h4>
+                            </div>
+                        </div>
+
+                        <!-- Retention Rate -->
+                        <div class="progressbar d-flex align-items-center">
+                            <div class="circle d-flex align-items-center justify-content-center position-relative me-3"
+                                data-percent="92">
+                                <canvas width="90" height="90" style="height: 80px; width: 80px;"></canvas>
+                                <div class="count position-absolute fw-bold text-white">92%</div>
+                            </div>
+                            <div class="content-area">
+                                <h4 class="text-white fw-bold mb-0">Retention Rate</h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="t-bottom ">
+                    <div class="row  g-5 py-4">
+                        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="card bg-transparent border-0">
+                                <div class="card-img position-relative overflow-hidden rounded-2">
+                                    <img src="/images/home/team/t-img1.png" class="rounded-2" alt="">
+                                    <div class="overlay d-flex justify-content-center align-items-end bottom-0 left-0">
+                                        <div class="social-icons d-flex gap-2">
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.facebook.com" target="_blank"><i
+                                                    class="bi bi-facebook "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.instagram.com" target="_blank"><i
+                                                    class="bi bi-instagram "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.linkedin.com" target="_blank"><i
+                                                    class="bi bi-linkedin "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.youtube.com" target="_blank"><i
+                                                    class="bi bi-youtube "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="text-uppercase text-white">john anderson</h5>
+                                    <h6 class="text-white">UI/UX Designer</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-center" data-aos="fade-down" data-aos-duration="2000">
+                            <div class="card bg-transparent border-0">
+                                <div class="card-img position-relative overflow-hidden rounded-2">
+                                    <img src="/images/home/team/t-img2.png" class="rounded-2" alt="">
+                                    <div class="overlay d-flex justify-content-center align-items-end bottom-0 left-0">
+                                        <div class="social-icons d-flex gap-2">
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.facebook.com" target="_blank"><i
+                                                    class="bi bi-facebook "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.instagram.com" target="_blank"><i
+                                                    class="bi bi-instagram "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.linkedin.com" target="_blank"><i
+                                                    class="bi bi-linkedin "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.youtube.com" target="_blank"><i
+                                                    class="bi bi-youtube "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="text-uppercase text-white">sarah miller</h5>
+                                    <h6 class="text-white">SEO Marketer</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-center" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="card bg-transparent border-0">
+                                <div class="card-img position-relative overflow-hidden rounded-2">
+                                    <img src="/images/home/team/t-img3.png" class="rounded-2" alt="">
+                                    <div class="overlay d-flex justify-content-center align-items-end bottom-0 left-0">
+                                        <div class="social-icons d-flex gap-2">
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.facebook.com" target="_blank"><i
+                                                    class="bi bi-facebook "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.instagram.com" target="_blank"><i
+                                                    class="bi bi-instagram "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.linkedin.com" target="_blank"><i
+                                                    class="bi bi-linkedin "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.youtube.com" target="_blank"><i
+                                                    class="bi bi-youtube "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="text-uppercase text-white">judit rodriguez</h5>
+                                    <h6 class="text-white">CEO-Founder Revev</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-center" data-aos="fade-down" data-aos-duration="2000">
+                            <div class="card bg-transparent border-0">
+                                <div class="card-img position-relative overflow-hidden rounded-2">
+                                    <img src="/images/home/team/t-img4.png" class="rounded-2" alt="">
+                                    <div class="overlay d-flex justify-content-center align-items-end bottom-0 left-0">
+                                        <div class="social-icons d-flex gap-2">
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.facebook.com" target="_blank"><i
+                                                    class="bi bi-facebook "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.instagram.com" target="_blank"><i
+                                                    class="bi bi-instagram "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.linkedin.com" target="_blank"><i
+                                                    class="bi bi-linkedin "></i></a>
+                                            <a class="text-black bg-white d-flex justify-content-center align-items-center"
+                                                href="https://www.youtube.com" target="_blank"><i
+                                                    class="bi bi-youtube "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="text-uppercase text-white">Autumn Phillips</h5>
+                                    <h6 class="text-white">WP Developer</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="test-sec p-md-4 p-lg-5 p-3 bg-dblack">
+        <div class="container py-5  position-relative overflow-hidden ">
+            <div class="text-start text-md-center text-lg-center  ">
+                <h4 class="text-uppercase text-lime ">
+                    <img class="brand-logo" src="/images/home/logo/logo.png" alt="logo" width="25"
+                        class="me-2 align-middle">Testimonials
+                </h4>
+                <h1 class="text-uppercase text-white fw-bold">What our clients say</h1>
+            </div>
+            <div class="row align-items-center g-5 justify-content-center position-relative">
+                <div class="col-lg-6 text-center position-relative" data-aos="fade-up-right" data-aos-duration="2000">
+                    <div
+                        class="testimonial-img d-none d-md-flex d-lg-flex justify-content-md-center align-items-nd-center">
+                        <img src="/images/home/testimonials/test-img1.png" alt="Client Image" class="main-img">
+                    </div>
+                </div>
+
+                <!-- Right Side Carousel -->
+                <div class="col-lg-6 position-relative" data-aos="fade-down-left" data-aos-duration="2000">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="testimonial-box p-3 p-md-5 p-lg-5 m-0 rounded-3 position-relative bg-black">
+                                    <div class="stars mb-2">
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                    </div>
+                                    <p>
+                                        “Our website has completely transformed since working with this team.
+                                        They understood our vision perfectly and delivered a design that exceeded
+                                        expectations.”
+                                    </p>
+                                    <div
+                                        class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mt-4 gap-3 gap-md-0">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="/images/home/testimonials/test-img2.png" alt="User"
+                                                class="rounded-circle" width="55" height="55">
+                                            <div>
+                                                <h5 class="text-white mb-0">Sheldon Jackson</h5>
+                                                <small class="text-white">Owner FeatherDev</small>
+                                            </div>
+                                        </div class="d-none d-md-block">
+                                        <img src="/images/home/testimonials/test-img3.png" alt="FeatherDev" width="140">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-box p-3 p-md-5 p-lg-5 m-0 rounded-3 position-relative bg-black">
+                                    <div class="stars mb-2">
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                    </div>
+                                    <p>
+                                        “Our website has completely transformed since working with this team.
+                                        They understood our vision perfectly and delivered a design that exceeded
+                                        expectations.”
+                                    </p>
+                                    <div
+                                        class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mt-4 gap-3 gap-md-0">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="/images/home/testimonials/test-img2.png" alt="User"
+                                                class="rounded-circle" width="55" height="55">
+                                            <div>
+                                                <h5 class="text-white mb-0">Sheldon Jackson</h5>
+                                                <small class="text-white">Owner FeatherDev</small>
+                                            </div>
+                                        </div class="d-none d-md-block">
+                                        <img src="/images/home/testimonials/test-img3.png" alt="FeatherDev" width="140">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-box p-3 p-md-5 p-lg-5 m-0 rounded-3 position-relative bg-black">
+                                    <div class="stars mb-2">
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                        <i class="bi bi-star-fill text-lime"></i>
+                                    </div>
+                                    <p>
+                                        “Our website has completely transformed since working with this team.
+                                        They understood our vision perfectly and delivered a design that exceeded
+                                        expectations.”
+                                    </p>
+                                    <div
+                                        class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mt-4 gap-3 gap-md-0">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <img src="/images/home/testimonials/test-img2.png" alt="User"
+                                                class="rounded-circle" width="55" height="55">
+                                            <div>
+                                                <h5 class="text-white mb-0">Sheldon Jackson</h5>
+                                                <small class="text-white">Owner FeatherDev</small>
+                                            </div>
+                                        </div class="d-none d-md-block">
+                                        <img src="/images/home/testimonials/test-img3.png" alt="FeatherDev" width="140">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation buttons below -->
+                        <!-- ✅ Buttons should be here (outside carousel-inner) -->
+                        <div class="carousel-nav text-center mt-4">
+                            <button class="btn-nav me-3" type="button" data-bs-target="#testimonialCarousel"
+                                data-bs-slide="prev">
+                                <i class="bi bi-chevron-left me-1"></i>
+                            </button>
+                            <button class="btn-nav" type="button" data-bs-target="#testimonialCarousel"
+                                data-bs-slide="next">
+                                <i class="bi bi-chevron-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- marquee -->
+    <section class="marquee-sec bg-lime overflow-hidden p-4 text-black">
+        <div class="container">
+            <div class="marquee ">
+                <div class="marquee-inner d-flex">
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+                        Entertainment
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>seo marketing
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>media
+                        Entertainment
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>website Design
+                    </h4>
+                    <h4 class="text-uppercase fw-bold m-0 twxt-black"><i class="bi bi-asterisk me-3"></i>motion graphic
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-black text-white pt-5">
+        <div class="container footer">
+            <p class="text-uppercase text-center msg">get in touch</p>
+            <div class="row p-3 p-md-5 p-lg-5 g-3">
+                <div class="col-lg-3">
+                    <div class="first">
+                        <h4 class="text-uppercase text-lime mb-2">
+                            <img src="/images/home/logo/brand2.png" alt="logo" width="140" class="">
+                        </h4>
+                        <p class=" text-white lh-base">At Renev, we believe that every business has the potential to the
+                            thrive with the right
+                            guidance.
+                        </p>
+                        <div class="icons">
+                            <a href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="https://pk.linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="second">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="about.html">About Us Section</a></li>
+                            <li><a href="services.html">Service Section</a></li>
+                            <li><a href="blog.html">Blog Section</a></li>
+                            <li><a href="blog.html">Pricing Plan Section</a></li>
+                            <li><a href="contact.html">Contact Us Section</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="third">
+                        <h5>Contact Us</h5>
+                        <ul class="contact">
+                            <li><a href=""><i class="bi bi-telephone me-2"></i>+1 123 456 7890</a></li>
+                            <li><a href=""><i class="bi bi-geo-alt me-2"></i>421 Allen, Mexico 4233</a></li>
+                            <li><a href=""><i class="bi bi-envelope me-2"></i>renevagency@com</a></li>
+                            <li><a href=""><i class="bi bi-globe me-2"></i>renevagency.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="forth">
+                        <h6 class="my-3">Join Newsletter</h6>
+                        <div class="footer-input">
+                            <input type="email" placeholder="Email">
+                            <button class="alert-btn btn btn-lime " type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right">
+            <p>&copy Copyright 2024 - Renev. All Right Reserved</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        document.querySelectorAll(".alert-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                alert("Button clicked!");
+            });
+        });
+    </script>
+    <script>
+        const form = document.getElementById("appointmentForm");
+
+        const fullName = document.getElementById("fullName");
+        const email = document.getElementById("email");
+        const service = document.getElementById("service");
+        const message = document.getElementById("message");
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const serviceError = document.getElementById("serviceError");
+        const messageError = document.getElementById("messageError");
+
+        function resetErrors() {
+            nameError.textContent = "";
+            emailError.textContent = "";
+            serviceError.textContent = "";
+            messageError.textContent = "";
+        }
+
+        function validateEmail(value) {
+            const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return pattern.test(value);
+        }
+
+        form.addEventListener("submit", function (e) {
+            resetErrors();
+            let valid = true;
+
+            // Name validation
+            let nameRegex = /^[A-Za-z\s]+$/; // allows letters and spaces only
+
+            if (fullName.value.trim().length < 3) {
+                nameError.textContent = "Please enter at least 3 characters.";
+                valid = false;
+            }
+            else if (!nameRegex.test(fullName.value.trim())) {
+                nameError.textContent = "Name must contain only letters.";
+                valid = false;
+            }
+            else {
+                nameError.textContent = "";
+            }
+
+            // Email
+            if (!validateEmail(email.value.trim())) {
+                emailError.textContent = "Please enter a valid email address.";
+                valid = false;
+            }
+
+            // Service
+            if (service.value === "") {
+                serviceError.textContent = "Please select a service.";
+                valid = false;
+            }
+
+            // Message
+            if (message.value.trim().length < 15) {
+                messageError.textContent = "Message must be at least 15 characters.";
+                valid = false;
+            }
+
+            // ❌ stop submission if invalid
+            if (!valid) {
+                e.preventDefault();
+                return;
+            }
+
+            // ✅ VALID — show alert and submit normally
+            alert("Your request has been submitted successfully!");
+        });
+
+    </script>
+
+</body>
+
+</html>

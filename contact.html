@@ -498,11 +498,238 @@
         .btn-lime:hover {
             background-color: #e0ff5e;
         }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* ---------- Extra Small Devices (Phones <576px) ---------- */
+        @media (max-width: 576px) {
+
+            h1 {
+                font-size: 24px !important;
+            }
+
+            h2 {
+                font-size: 22px !important;
+            }
+
+            h3 {
+                font-size: 18px !important;
+            }
+
+            h4 {
+                font-size: 16px !important;
+            }
+
+            p {
+                font-size: 8 !important;
+                color: #ccc;
+            }
+
+            .hero {
+                padding: 50px 15px;
+                margin-top: 70px;
+                text-align: start;
+            }
+
+            .upper .image img {
+                width: 100px;
+            }
+
+            .lower img {
+                height: 220px;
+            }
+
+            .about-sec .row,
+            .services-sec .row,
+            .team-sec .row {
+                text-align: start;
+            }
+
+            .ser-img img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .ser-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .portfolio-sec .card {
+                margin-bottom: 20px;
+            }
+
+            .team .card {
+                margin-bottom: 25px;
+            }
+
+            footer .msg {
+                font-size: 48px;
+            }
+
+            footer .icons a {
+                height: 32px;
+                width: 32px;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 2rem;
+            }
+
+            .form-container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .search-box input {
+                width: 80%;
+            }
+        }
+
+        /* ---------- Small Devices (Tablets 576px–767px) ---------- */
+        @media (min-width: 577px) and (max-width: 1401px) {
+
+            h1 {
+                font-size: 36px !important;
+            }
+
+            h2 {
+                font-size: 28px !important;
+            }
+
+            h3 {
+                font-size: 22px !important;
+            }
+
+            p {
+                font-size: 8 !important;
+                color: #ccc;
+            }
+
+            .hero {
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            .ser-img img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .about-sec .container,
+            .services-sec .container,
+            .team-sec .container {
+                text-align: center;
+            }
+
+            .portfolio-sec .card {
+                margin-bottom: 25px;
+            }
+
+            footer .msg {
+                font-size: 72px;
+            }
+
+            .sidebar {
+                width: 80%;
+                padding: 2.5rem;
+            }
+
+            .form-container {
+                max-width: 90%;
+            }
+
+            .search-box input {
+                width: 70%;
+            }
+        }
+
+        /* ---------- Medium Devices (Tablets Landscape / Small Laptops 768px–991px) ---------- */
+        @media(min-width: 1402px) {
+
+            h1 {
+                font-size: 42px !important;
+            }
+
+            h2 {
+                font-size: 32px !important;
+            }
+
+            p {
+                font-size: 8 !important;
+                color: #ccc;
+            }
+
+            .hero {
+                padding: 70px 25px;
+            }
+
+            .ser-card {
+                margin-bottom: 30px;
+            }
+
+            .portfolio-sec .card {
+                margin-bottom: 25px;
+            }
+
+            .team .card {
+                margin-bottom: 25px;
+            }
+
+            .sidebar {
+                width: 60%;
+            }
+        }
+
+        /* ---------- Large Devices (Desktops 992px–1199px) ---------- */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+
+            .hero {
+                padding: 80px 30px;
+            }
+
+            .form-container {
+                max-width: 400px;
+            }
+
+            .sidebar {
+                width: 450px;
+            }
+
+            .team .card-img .overlay {
+                height: 0%;
+            }
+        }
+
+        /* ---------- Extra Large Devices (≥1200px) ---------- */
+        @media (min-width: 1200px) {
+
+            .hero {
+                padding: 100px 50px;
+            }
+
+            .form-container {
+                max-width: 420px;
+            }
+
+            .sidebar {
+                width: 420px;
+            }
+
+            .team .card-img img:hover {
+                transform: scale(1.05);
+            }
+        }
     </style>
 </head>
 
 <body>
-
     <input type="checkbox" id="sidebar-toggle" hidden>
     <input type="checkbox" id="search-toggle" hidden>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dblack py-2 fixed-top">
@@ -512,19 +739,20 @@
             </a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav gap-4 bg-dark px-4 py-2 rounded">
-                    <li class="nav-item"><a class="nav-link fs-5" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link fs-5" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link fs-5" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link fs-5" href="blog.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5 active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="nav-btn d-flex align-items-center gap-4">
                 <label for="search-toggle" class="m-0 p-0" style="cursor:pointer;">
                     <i class="bi bi-search text-white fs-3"></i>
                 </label>
-                <div class="line bg-light" style="width: 1px; height: 25px"></div>
-                <button class="btn btn-lime fw-bold alert-btn">LET'S BUILD TOGETHER</button>
+                <div class="line bg-light d-none d-lg-block d-md-block" style="width: 1px; height: 25px"></div>
+                <button class="alert-btn btn btn-lime fw-bold d-none d-lg-block d-md-block">LET'S BUILD
+                    TOGETHER</button>
                 <label for="sidebar-toggle" class="m-0 p-0" style="cursor:pointer;">
                     <i class="bi bi-list text-white fs-2"></i>
                 </label>
@@ -540,13 +768,13 @@
                 </label>
                 <img src="/images/home/logo/brand.png" width="125px" alt="" class="mb-3" />
                 <ul class="list-unstyled mt-4">
-                    <li><a href="index.html" class="mb-2 text-uppercase fw-bold ">Home</a></li>
-                    <li><a href="about.html" class="mb-2 text-uppercase fw-bold ">About Us</a></li>
+                    <li><a href="index.html" class="mb-2 text-uppercase fw-bold active">Home</a></li>
+                    <li><a href="about.html" class="mb-2 text-uppercase fw-bold">About Us</a></li>
                     <li><a href="services.html" class="mb-2 text-uppercase fw-bold">Service</a></li>
                     <li><a href="blog.html" class="mb-2 text-uppercase fw-bold">Blogs</a></li>
-                    <li><a href="contact.html" class="mb-2 text-uppercase fw-bold active">Contact</a></li>
+                    <li><a href="contact.html" class="mb-2 text-uppercase fw-bold">Contact</a></li>
                 </ul>
-                <button class="btn btn-lime fw-bold my-3">GET IN TOUCH NOW</button>
+                <button class="alert-btn btn btn-lime fw-bold my-3">GET IN TOUCH NOW</button>
                 <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Social Links</h5>
                 <div class="d-flex gap-3 mt-2">
                     <a href="https://www.facebook.com" target="_blank"><i
@@ -560,12 +788,12 @@
                     <a href="https://www.youtube.com" target="_blank"><i
                             class="side-bar-icon bg-lime rounded-circle text-black bi bi-youtube"></i></a>
                 </div>
-                <h5 class="mt-4 text-white fw-bold fs-4 mb-2 ">Subscribe To Newsletter</h5>
+                <h5 class="mt-4 text-white fw-bold fs-4 mb-2">Subscribe To Newsletter</h5>
                 <div class="position-relative my-3" style="max-width: 350px;">
                     <input type="email" placeholder="Email Address*"
                         class="form-control bg-dark text-white border-0 pe-5 py-4" style="padding-right: 120px;">
                     <button
-                        class="btn btn-lime fw-bold position-absolute top-50 end-0 translate-middle-y me-3 alert-btn">SUBSCRIBE</button>
+                        class="alert-btn btn btn-lime fw-bold position-absolute top-50 end-0 translate-middle-y me-3">SUBSCRIBE</button>
                 </div>
             </div>
         </section>
